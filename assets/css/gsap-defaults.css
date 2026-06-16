@@ -1,0 +1,47 @@
+/* GSAP animation utility classes */
+
+.fade-in {
+  opacity: 0;
+}
+
+.fade-in.active {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.slide-up.active {
+  animation: slideUp 0.3s ease forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.stagger-item {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.stagger-item.active {
+  animation: staggerItem 0.3s ease forwards;
+}
+
+@keyframes staggerItem {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
