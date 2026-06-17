@@ -64,6 +64,11 @@ body {
   height: 100%;
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 150px;
 }
 
 .slide:has(.hero) {
@@ -94,7 +99,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem;
+  padding: 4rem 4rem 120px 4rem;
   text-align: center;
 }
 
@@ -330,6 +335,17 @@ body {
 .slide img:hover {
   filter: drop-shadow(0 12px 35px rgba(56, 189, 248, 0.2));
   transform: scale(1.02);
+}
+
+/* Logo in hero slides */
+.slide.active .hero img {
+  max-width: 150px;
+  max-height: 120px;
+  margin: 0 0 1.5rem 0;
+}
+
+.slide.active .hero img:hover {
+  transform: scale(1.05);
 }
 
 /* Clippy robot assistant */
