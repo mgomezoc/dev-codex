@@ -1,9 +1,13 @@
+<div class="hero">
+
 # Idea final
 
-**La IA no debe tener el volante completo.**  
-**Debe ser copiloto, no conductor.**
+La IA no debe tener el volante completo.
+Debe ser copiloto, con limites claros.
 
-Un buen desarrollador con IA puede producir más y mejor.  
-Pero si se usa sin criterio, también genera problemas más rápido.
+Con contexto + permisos + pruebas,
+un buen desarrollador con IA produce mejor y mas seguro.
 
-**Se trata de aprender a dirigirla.**
+**Se trata de dirigir la herramienta, no de delegar criterio.**
+
+</div>

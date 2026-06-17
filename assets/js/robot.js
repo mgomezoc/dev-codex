@@ -39,6 +39,8 @@ const robotAssistant = {
 
   currentSlide: 1,
   isMoving: false,
+  pendingMessageTimer: null,
+  isSpeechVisible: false,
 
   init() {
     this.createRobot();
@@ -80,10 +82,8 @@ const robotAssistant = {
       repeat: -1
     });
 
-    // Mouse follow escape behavior (Clippy style)
+    // Subtle mouse follow behavior - robot looks at cursor without escaping
     document.addEventListener('mousemove', (e) => {
-      if (this.isMoving) return;
-
       const robot = this.element;
       const rect = robot.getBoundingClientRect();
       const distX = e.clientX - (rect.left + rect.width / 2);
@@ -91,30 +91,24 @@ const robotAssistant = {
 
       const distance = Math.sqrt(distX * distX + distY * distY);
 
-      // If mouse gets too close, robot runs away
-      if (distance < 250) {
+      // Subtle tilt based on mouse position (only if very close)
+      if (distance < 400 && distance > 50) {
         const angle = Math.atan2(distY, distX);
-        const escapeX = Math.cos(angle + Math.PI) * 180;
-        const escapeY = Math.sin(angle + Math.PI) * 180;
+        const tilt = (angle / Math.PI) * 3; // Max 3 degrees rotation
 
         gsap.to(robot, {
-          x: escapeX,
-          y: escapeY,
+          rotation: tilt,
+          duration: 0.3,
+          overwrite: 'auto',
+          ease: "power1.out"
+        });
+      } else {
+        gsap.to(robot, {
+          rotation: 0,
           duration: 0.4,
           overwrite: 'auto',
-          ease: "power2.out"
+          ease: "power1.out"
         });
-
-        this.isMoving = true;
-        setTimeout(() => {
-          this.isMoving = false;
-          gsap.to(robot, {
-            x: 0,
-            y: 0,
-            duration: 1.2,
-            ease: "elastic.out"
-          });
-        }, 2500);
       }
     });
   },
@@ -131,6 +125,7 @@ const robotAssistant = {
 
     speech.textContent = text;
     speech.classList.add('show');
+    this.isSpeechVisible = true;
 
     gsap.to(speech, {
       opacity: 1,
@@ -138,17 +133,25 @@ const robotAssistant = {
       duration: 0.3,
       ease: "back.out"
     });
+  },
 
-    gsap.delayedCall(4, () => {
-      gsap.to(speech, {
-        opacity: 0,
-        y: 10,
-        duration: 0.3,
-        ease: "back.in",
-        onComplete: () => {
-          speech.classList.remove('show');
-        }
-      });
+  hideMessage() {
+    if (!this.element) return;
+
+    const speech = this.element.querySelector('.robot-speech');
+    if (!speech) return;
+
+    gsap.killTweensOf(speech);
+    this.isSpeechVisible = false;
+
+    gsap.to(speech, {
+      opacity: 0,
+      y: 10,
+      duration: 0.25,
+      ease: "back.in",
+      onComplete: () => {
+        speech.classList.remove('show');
+      }
     });
   },
 
@@ -162,9 +165,16 @@ const robotAssistant = {
 
   onSlideChange(slideNum) {
     this.currentSlide = slideNum;
-    setTimeout(() => {
-      this.showMessage(this.getMessageForSlide(slideNum));
-    }, 300);
+    this.hideMessage();
+    if (this.pendingMessageTimer) {
+      clearTimeout(this.pendingMessageTimer);
+    }
+
+    const nextMessage = this.getMessageForSlide(slideNum);
+    this.pendingMessageTimer = setTimeout(() => {
+      this.showMessage(nextMessage);
+      this.pendingMessageTimer = null;
+    }, 2000);
   },
 
   setupEventListeners() {
@@ -175,6 +185,10 @@ const robotAssistant = {
     }
   }
 };
+
+if (typeof window !== 'undefined') {
+  window.robotAssistant = robotAssistant;
+}
 
 // Initialize when DOM is ready
 if (document.readyState === 'loading') {

@@ -9,6 +9,10 @@ class KeyboardController {
   }
 
   handleKeydown(event) {
+    if (event.repeat) {
+      return;
+    }
+
     switch (event.key) {
       case 'ArrowRight':
       case ' ':

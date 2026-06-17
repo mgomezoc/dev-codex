@@ -1,3 +1,5 @@
+<div class="hero">
+
 # Preguntas / comentarios
 
 ¿Qué parte de su flujo diario creen que podría mejorar más con IA?
@@ -7,3 +9,5 @@
 - ¿Documentación?
 - ¿Migraciones?
 - ¿Revisión de código?
+
+</div>

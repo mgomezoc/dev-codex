@@ -3,3 +3,8 @@ index.html
 .DS_Store
 *.log
 .superpowers/
+
+# Visual QA artifacts
+screenshot-*.png
+playwright-report/
+test-results/

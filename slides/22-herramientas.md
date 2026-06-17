@@ -1,14 +1,14 @@
-# Ya no solo responden: también operan
+# Ya no solo responden: tambien operan
 
 Pueden usar herramientas como:
 
 - Lectura de archivos
-- Búsqueda en el repo
-- Edición de archivos
-- Terminal/Bash/PowerShell
+- Busqueda en el repo
+- Edicion de archivos
+- Terminal o shell
 - Git
 - MCP
-- Navegador o herramientas externas
+- Navegador o herramientas externas, si estan configuradas
 - Skills y comandos
 
-IA → Repo → Terminal → Git → Browser → Docs → Tickets
+IA -> Repo -> Terminal -> Git -> Docs -> Tickets

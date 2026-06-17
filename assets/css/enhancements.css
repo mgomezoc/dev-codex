@@ -1,5 +1,19 @@
 /* Enhanced animations and effects for presentation */
 
+/* ===== Neon Glow Effect ===== */
+@keyframes neonGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(51, 196, 255, 0.5), 0 0 20px rgba(51, 196, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(51, 196, 255, 0.8), 0 0 30px rgba(51, 196, 255, 0.5);
+  }
+}
+
+.neon-glow {
+  animation: neonGlow 3s ease-in-out infinite;
+}
+
 /* ===== Parallax Effects ===== */
 .parallax-container {
   position: relative;
@@ -257,6 +271,44 @@
   animation: backgroundShift 15s ease infinite;
 }
 
+/* ===== Typewriter Effect for Titles ===== */
+@keyframes typewriterCaret {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+.typewriter-title {
+  display: block;
+  min-height: 1.12em;
+  width: 100%;
+  padding-right: 0.18em;
+  position: relative;
+  overflow: visible;
+  text-wrap: balance;
+  white-space: normal;
+}
+
+.typewriter-title:empty::before {
+  content: '\00a0';
+}
+
+.typewriter-title::after {
+  content: '';
+  display: inline-block;
+  width: 0.08em;
+  height: 0.9em;
+  margin-left: 0.08em;
+  vertical-align: -0.08em;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  border-radius: 999px;
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.55);
+  animation: typewriterCaret 0.65s steps(1, end) infinite;
+}
+
 /* ===== Slide Transition Animations ===== */
 .slide-content h1,
 .slide-content h2,
@@ -267,7 +319,7 @@
   will-change: opacity, transform;
 }
 
-.slide.active .slide-content > * {
+.slide.active .slide-content > :not(h1):not(h2):not(h3):not(ul):not(ol) {
   animation: contentEnter 0.6s ease forwards;
 }
 
@@ -282,11 +334,10 @@
   }
 }
 
-.slide.active .slide-content > :nth-child(1) { animation-delay: 0.1s; }
-.slide.active .slide-content > :nth-child(2) { animation-delay: 0.2s; }
 .slide.active .slide-content > :nth-child(3) { animation-delay: 0.3s; }
-.slide.active .slide-content > :nth-child(4) { animation-delay: 0.4s; }
-.slide.active .slide-content > :nth-child(5) { animation-delay: 0.5s; }
+.slide.active .slide-content > :nth-child(4) { animation-delay: 0.45s; }
+.slide.active .slide-content > :nth-child(5) { animation-delay: 0.6s; }
+.slide.active .slide-content > :nth-child(6) { animation-delay: 0.75s; }
 
 /* ===== Reduced Motion Support ===== */
 @media (prefers-reduced-motion: reduce) {
@@ -297,7 +348,8 @@
   .code-block-enhanced,
   .slide.hero h1,
   .slide.hero p,
-  .slide-content > * {
+  .slide-content > *,
+  .typewriter-title::after {
     animation: none !important;
     transform: none !important;
     will-change: auto !important;

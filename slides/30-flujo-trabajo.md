@@ -1,9 +1,7 @@
 # La IA no reemplaza el proceso: lo refuerza
 
-**Antes:**
-Desarrollador → Código → Revisión
+**Antes:** Dev -> Codigo -> Revision  
+**Ahora:** Dev (decide) + IA (analiza) + IA (propone) + IA (prueba)
 
-**Ahora:**
-Desarrollador + IA (analizar) + IA (proponer) + IA (probar) + humano (decidir)
-
+La IA suma velocidad y consistencia, pero la decision final sigue siendo humana.
 **La IA sirve como copiloto, no conductor.**

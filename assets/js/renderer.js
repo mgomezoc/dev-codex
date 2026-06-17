@@ -16,6 +16,10 @@ class PresentationRenderer {
   }
 
   showSlide(index) {
+    if (this.totalSlides === 0) {
+      return;
+    }
+
     // Bounds check
     if (index < 0) {
       this.currentSlide = 0;
@@ -25,15 +29,24 @@ class PresentationRenderer {
       this.currentSlide = index;
     }
 
+    const targetSlide = this.slides[this.currentSlide];
+
+    if (!targetSlide) {
+      return;
+    }
+
+    if (targetSlide.classList.contains('active')) {
+      return;
+    }
+
     // Hide all slides
     this.slides.forEach(slide => {
       slide.classList.remove('active');
     });
 
     // Show current slide
-    if (this.slides[this.currentSlide]) {
-      this.slides[this.currentSlide].classList.add('active');
-    }
+    targetSlide.classList.add('active');
+    targetSlide.dataset.animationToken = String(Date.now());
 
     // Update counter
     this.updateCounter();
@@ -75,15 +88,32 @@ class PresentationRenderer {
 }
 
 // Initialize renderer when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
+const initRenderer = () => {
+  if (window.renderer) {
+    return;
+  }
+
   window.renderer = new PresentationRenderer();
 
   // Connect buttons to renderer
-  document.getElementById('next-btn').addEventListener('click', () => {
-    window.renderer.nextSlide();
-  });
+  const nextBtn = document.getElementById('next-btn');
+  const prevBtn = document.getElementById('prev-btn');
 
-  document.getElementById('prev-btn').addEventListener('click', () => {
-    window.renderer.prevSlide();
-  });
-});
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      window.renderer.nextSlide();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      window.renderer.prevSlide();
+    });
+  }
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initRenderer);
+} else {
+  initRenderer();
+}

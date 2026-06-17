@@ -4,10 +4,7 @@
 # Reglas del proyecto
 
 ## Stack
-- PHP 8.1
-- CodeIgniter 4
-- Bootstrap 5.3
-- MySQL
+PHP 8.1 · CodeIgniter 4 · Bootstrap 5.3 · MySQL
 
 ## Comandos
 - php spark serve
@@ -17,8 +14,8 @@
 ## Reglas
 - No tocar producción
 - No agregar dependencias sin justificar
-- Analizar archivos relacionados antes de modificar
-- Ejecutar pruebas después de modificar
+- Analizar antes de modificar
+- Ejecutar pruebas después
 ```
 
 **Práctico, no enorme.**

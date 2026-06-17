@@ -1,13 +1,13 @@
-# No siempre necesitas el modelo más pesado
+# Seleccionar el modelo por tipo de trabajo
 
-| Tarea | Modelo |
+| Tarea | Criterio recomendado |
 |---|---|
-| Auditoría compleja | Opus / fuerte |
-| Arquitectura | Opus / fuerte |
-| Debug difícil | Opus + razonamiento alto |
-| Código repetitivo | Sonnet / medio |
-| Búsqueda rápida | Haiku / ligero |
-| Documentación | Sonnet |
-| Revisión sencilla | Sonnet |
+| Auditoria compleja | Modelo fuerte + razonamiento alto |
+| Arquitectura | Modelo fuerte + validacion |
+| Debug dificil | Razonamiento alto + pruebas |
+| Tareas repetitivas | Modelo medio o rapido |
+| Clasificacion simple | Modelo liviano |
+| Documentacion tecnica | Modelo medio con buena estructura |
+| Revision final de alto riesgo | Modelo fuerte + ojos humanos |
 
-**Más incertidumbre → modelo más fuerte**
+**Mas riesgo o ambiguedad -> mas capacidad.**

@@ -1,4 +1,4 @@
-![Robot](assets/img/robot.png)
+<img src="assets/img/robot.png" alt="Robot" class="robot-slide-3" />
 
 # La IA no es magia
 

@@ -1,0 +1,1417 @@
+{
+  "label": "active-desktop-1280x720",
+  "url": "http://localhost:8000/index.html",
+  "generatedAt": "2026-06-17T04:43:15.060Z",
+  "totalSlides": 33,
+  "issueCount": 0,
+  "issues": [],
+  "results": [
+    {
+      "slide": 1,
+      "title": "IA para programar en el día a día",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": null,
+      "surfaceWidthRatio": null,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [
+        {
+          "src": "assets/img/one_card-logo.png",
+          "alt": "One Card Logo",
+          "naturalWidth": 1275,
+          "naturalHeight": 363,
+          "rect": {
+            "left": 565,
+            "top": 205,
+            "right": 715,
+            "bottom": 248,
+            "width": 150,
+            "height": 43
+          }
+        }
+      ],
+      "unloadedImages": []
+    },
+    {
+      "slide": 2,
+      "title": "Qué quiero que se lleven de esta plática",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 92,
+        "right": 1203,
+        "bottom": 349,
+        "width": 1126,
+        "height": 256
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 3,
+      "title": "La IA no es magia",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 275,
+        "right": 1203,
+        "bottom": 467,
+        "width": 1126,
+        "height": 192
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [
+        {
+          "src": "assets/img/robot.png",
+          "alt": "Robot",
+          "naturalWidth": 1228,
+          "naturalHeight": 1440,
+          "rect": {
+            "left": 566,
+            "top": 22,
+            "right": 714,
+            "bottom": 194,
+            "width": 147,
+            "height": 173
+          }
+        }
+      ],
+      "unloadedImages": []
+    },
+    {
+      "slide": 4,
+      "title": "No son solo chats para pedir código",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 126,
+        "right": 1203,
+        "bottom": 414,
+        "width": 1126,
+        "height": 288
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 5,
+      "title": "Cómo lo uso normalmente",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 92,
+        "right": 1203,
+        "bottom": 413,
+        "width": 1126,
+        "height": 320
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 6,
+      "title": "Antes de soltarle una tarea a la IA",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 126,
+        "right": 1203,
+        "bottom": 382,
+        "width": 1126,
+        "height": 256
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 7,
+      "title": "La IA trabaja con contexto",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": null,
+      "surfaceWidthRatio": null,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 8,
+      "title": "Tokens: la memoria que se va llenando",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 126,
+        "right": 1203,
+        "bottom": 382,
+        "width": 1126,
+        "height": 256
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 9,
+      "title": "Prompt flojo = resultado flojo",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 92,
+        "right": 1203,
+        "bottom": 151,
+        "width": 1126,
+        "height": 58
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 10,
+      "title": "Prompt útil = contexto + límites + resultado esperado",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 141,
+        "right": 1203,
+        "bottom": 609,
+        "width": 1126,
+        "height": 468
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 11,
+      "title": "Mi fórmula para pedirle trabajo a la IA",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 92,
+        "right": 1203,
+        "bottom": 381,
+        "width": 1126,
+        "height": 288
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 12,
+      "title": "Prompt maestro: primero entender, luego tocar",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 141,
+        "right": 1203,
+        "bottom": 506,
+        "width": 1126,
+        "height": 365
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 13,
+      "title": "No todo debe ir en el prompt",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 126,
+        "right": 1203,
+        "bottom": 359,
+        "width": 1126,
+        "height": 233
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 14,
+      "title": "AGENTS.md: instrucciones que Codex lee",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 92,
+        "right": 1203,
+        "bottom": 509,
+        "width": 1126,
+        "height": 417
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 15,
+      "title": "CLAUDE.md: memoria de proyecto para Claude",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 141,
+        "right": 1203,
+        "bottom": 429,
+        "width": 1126,
+        "height": 289
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 16,
+      "title": "Permisos: no todo debe estar abierto",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 126,
+        "right": 1203,
+        "bottom": 350,
+        "width": 1126,
+        "height": 224
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 17,
+      "title": "Skills: instrucciones reutilizables",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 126,
+        "right": 1203,
+        "bottom": 350,
+        "width": 1126,
+        "height": 224
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 18,
+      "title": "Agentes: dividir el trabajo por rol",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 126,
+        "right": 1203,
+        "bottom": 350,
+        "width": 1126,
+        "height": 224
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 19,
+      "title": "Un subagente puede tener límites",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 92,
+        "right": 1203,
+        "bottom": 356,
+        "width": 1126,
+        "height": 263
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 20,
+      "title": "No siempre necesitas el modelo más pesado",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 127,
+        "right": 1203,
+        "bottom": 591,
+        "width": 1126,
+        "height": 464
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 21,
+      "title": "Debugging: no le pidas \"arréglalo\" de golpe",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 174,
+        "right": 1203,
+        "bottom": 386,
+        "width": 1126,
+        "height": 212
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 22,
+      "title": "Ya no solo responden: también operan",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 126,
+        "right": 1203,
+        "bottom": 446,
+        "width": 1126,
+        "height": 320
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 23,
+      "title": "Git es el cinturón de seguridad",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 126,
+        "right": 1203,
+        "bottom": 382,
+        "width": 1126,
+        "height": 256
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 24,
+      "title": "Qué no debemos compartir ni permitir",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 126,
+        "right": 1203,
+        "bottom": 414,
+        "width": 1126,
+        "height": 288
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 25,
+      "title": "Errores que sí pasan",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 92,
+        "right": 1203,
+        "bottom": 413,
+        "width": 1126,
+        "height": 320
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 26,
+      "title": "Lo que sí recomiendo hacer",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 92,
+        "right": 1203,
+        "bottom": 413,
+        "width": 1126,
+        "height": 320
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 27,
+      "title": "Demo 1: crear AGENTS.md / CLAUDE.md",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 126,
+        "right": 1203,
+        "bottom": 318,
+        "width": 1126,
+        "height": 192
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 28,
+      "title": "Demo 2: auditoría rápida de un repo",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 126,
+        "right": 1203,
+        "bottom": 350,
+        "width": 1126,
+        "height": 224
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 29,
+      "title": "Demo alternativa: debug sin modificar de golpe",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": null,
+      "surfaceWidthRatio": null,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 30,
+      "title": "La IA no reemplaza el proceso: lo refuerza",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": null,
+      "surfaceWidthRatio": null,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 31,
+      "title": "Primeros pasos recomendados",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": {
+        "left": 77,
+        "top": 92,
+        "right": 1203,
+        "bottom": 382,
+        "width": 1126,
+        "height": 290
+      },
+      "surfaceWidthRatio": 0.88,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 32,
+      "title": "Idea final",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": null,
+      "surfaceWidthRatio": null,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    },
+    {
+      "slide": 33,
+      "title": "Preguntas / comentarios",
+      "hasTitle": true,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "surfaceRect": null,
+      "surfaceWidthRatio": null,
+      "bodyOverflowX": false,
+      "bodyScrollWidth": 1280,
+      "bodyClientWidth": 1280,
+      "controlsRect": {
+        "left": 450,
+        "top": 636,
+        "right": 830,
+        "bottom": 698,
+        "width": 380,
+        "height": 63
+      },
+      "robotRect": {
+        "left": 1179,
+        "top": 635,
+        "right": 1256,
+        "bottom": 711,
+        "width": 77,
+        "height": 77
+      },
+      "outOfViewport": [],
+      "overlapsControls": [],
+      "overlapsRobot": [],
+      "verticalOverflow": [],
+      "images": [],
+      "unloadedImages": []
+    }
+  ]
+}
