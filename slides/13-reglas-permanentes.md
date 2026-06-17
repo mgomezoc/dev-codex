@@ -9,3 +9,5 @@ Usar archivos de reglas:
 - `.claude/skills/` para skills
 
 Si repites algo en cada prompt, debería estar en un archivo.
+
+> Esta estructura te ahorra 40% de caracteres por prompt. A escala, son MILES de tokens ahorrados.

@@ -10,3 +10,5 @@ Revisar:
 - Archivos sensibles protegidos
 
 Trabajar siempre en rama separada. No en main.
+
+> Nunca, NUNCA, le des a la IA acceso de escritura sin revisar la rama. Esto es innegociable.

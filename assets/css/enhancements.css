@@ -14,6 +14,94 @@
   animation: neonGlow 3s ease-in-out infinite;
 }
 
+/* ===== List Item Stagger Animation ===== */
+@keyframes listItemEnter {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide.active .slide-content > ul li,
+.slide.active .slide-content > ol li {
+  animation: listItemEnter 0.5s ease-out forwards;
+}
+
+.slide-content > ul li:nth-child(1),
+.slide-content > ol li:nth-child(1) { animation-delay: 0.1s; }
+.slide-content > ul li:nth-child(2),
+.slide-content > ol li:nth-child(2) { animation-delay: 0.2s; }
+.slide-content > ul li:nth-child(3),
+.slide-content > ol li:nth-child(3) { animation-delay: 0.3s; }
+.slide-content > ul li:nth-child(4),
+.slide-content > ol li:nth-child(4) { animation-delay: 0.4s; }
+.slide-content > ul li:nth-child(5),
+.slide-content > ol li:nth-child(5) { animation-delay: 0.5s; }
+
+/* ===== Pro Tip / Warning Cards ===== */
+.slide blockquote {
+  border-left: 5px solid var(--accent) !important;
+  background: linear-gradient(135deg, rgba(51, 196, 255, 0.1), rgba(51, 196, 255, 0.05)) !important;
+  border-radius: 0.8rem !important;
+  padding: 1.5rem !important;
+  position: relative;
+  font-style: italic;
+}
+
+.slide blockquote::before {
+  content: '💡';
+  display: inline-block;
+  margin-right: 0.8rem;
+  font-size: 1.3em;
+}
+
+/* Warning/Danger style */
+.slide blockquote:has(+ em:contains("⚠️")) {
+  border-left-color: var(--warning);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.05)) !important;
+}
+
+.slide blockquote:has(+ em:contains("⚠️"))::before {
+  content: '⚠️';
+}
+
+/* ===== Terminal/Code Effect ===== */
+.slide pre {
+  font-family: 'Fira Code', 'Monaco', monospace;
+  letter-spacing: 0.02em;
+}
+
+.slide pre code::before {
+  content: '$ ';
+  color: var(--accent);
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* Prism.js overrides for better theming */
+.slide pre[class*="language-"] {
+  background: linear-gradient(180deg, rgba(15, 20, 35, 0.95), rgba(10, 15, 30, 0.95)) !important;
+  border: 2px solid rgba(51, 196, 255, 0.35) !important;
+  border-left: 5px solid var(--accent) !important;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6), 0 0 40px rgba(51, 196, 255, 0.15) !important;
+}
+
+.slide pre[class*="language-"] code {
+  background: transparent !important;
+  color: #e0f7ff !important;
+}
+
+.token.keyword { color: #7dd3fc !important; font-weight: bold; }
+.token.string { color: #86efac !important; }
+.token.comment { color: #6b7280 !important; font-style: italic; }
+.token.function { color: #fbbf24 !important; }
+.token.number { color: #f87171 !important; }
+.token.operator { color: #a78bfa !important; }
+
 /* ===== Parallax Effects ===== */
 .parallax-container {
   position: relative;

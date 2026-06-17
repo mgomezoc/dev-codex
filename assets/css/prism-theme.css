@@ -1,0 +1,134 @@
+/* Custom Prism.js theme overrides for presenter */
+
+/* Base code block styling */
+pre[class*="language-"] {
+  background: linear-gradient(180deg, rgba(15, 20, 35, 0.98), rgba(10, 15, 30, 0.98)) !important;
+  border: 2px solid rgba(51, 196, 255, 0.35) !important;
+  border-left: 5px solid #33c4ff !important;
+  border-radius: 0.8rem !important;
+  padding: 1.5rem !important;
+  margin: 1.5rem 0 !important;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6), 0 0 40px rgba(51, 196, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  overflow-x: auto;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+pre[class*="language-"]:hover {
+  border-color: #7dd3fc !important;
+  box-shadow: 0 28px 90px rgba(0, 7, 20, 0.65), 0 0 50px rgba(51, 196, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+}
+
+code[class*="language-"] {
+  color: #e0f7ff !important;
+  background: transparent !important;
+  font-family: 'Fira Code', 'Cascadia Code', 'Monaco', monospace !important;
+  font-weight: 500;
+}
+
+/* Token styling */
+.token.keyword {
+  color: #7dd3fc !important;
+  font-weight: bold;
+}
+
+.token.string {
+  color: #86efac !important;
+}
+
+.token.comment {
+  color: #6b7280 !important;
+  font-style: italic;
+}
+
+.token.function {
+  color: #fbbf24 !important;
+}
+
+.token.number {
+  color: #f87171 !important;
+}
+
+.token.operator {
+  color: #a78bfa !important;
+}
+
+.token.class-name {
+  color: #7dd3fc !important;
+  font-weight: bold;
+}
+
+.token.punctuation {
+  color: #d1d5db !important;
+}
+
+.token.tag {
+  color: #7dd3fc !important;
+}
+
+.token.attr-name {
+  color: #fbbf24 !important;
+}
+
+.token.attr-value {
+  color: #86efac !important;
+}
+
+/* Line numbers */
+.line-numbers-rows {
+  border-right: 2px solid rgba(51, 196, 255, 0.2) !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+.line-numbers-rows > span:before {
+  color: #6b7280 !important;
+  font-weight: 600;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  background: linear-gradient(135deg, rgba(30, 40, 70, 0.8), rgba(20, 30, 55, 0.8)) !important;
+  border: 1px solid rgba(51, 196, 255, 0.4) !important;
+  padding: 0.25rem 0.55rem !important;
+  border-radius: 0.4rem !important;
+  color: #e0f7ff !important;
+  font-family: 'Fira Code', 'Cascadia Code', monospace !important;
+  font-size: 0.9em !important;
+  box-shadow: 0 0 12px rgba(51, 196, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+:not(pre) > code[class*="language-"]:hover {
+  background: linear-gradient(135deg, rgba(35, 50, 85, 0.95), rgba(25, 35, 65, 0.95)) !important;
+  border-color: #7dd3fc !important;
+  box-shadow: 0 0 16px rgba(51, 196, 255, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+/* Scrollbar styling for code blocks */
+pre[class*="language-"]::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+pre[class*="language-"]::-webkit-scrollbar-track {
+  background: rgba(51, 196, 255, 0.1);
+  border-radius: 0.8rem;
+}
+
+pre[class*="language-"]::-webkit-scrollbar-thumb {
+  background: rgba(51, 196, 255, 0.4);
+  border-radius: 0.8rem;
+}
+
+pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
+  background: rgba(51, 196, 255, 0.6);
+}
+
+/* Terminal prompt styling */
+pre[class*="language-bash"]::before,
+pre[class*="language-shell"]::before {
+  content: '$ ';
+  color: #7dd3fc;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}

@@ -29,18 +29,20 @@ const slides = slideFiles.map((file, index) => {
 const mainCss = fs.readFileSync('assets/css/main.css', 'utf-8');
 const gsapCss = fs.readFileSync('assets/css/gsap-defaults.css', 'utf-8');
 const enhancementsCss = fs.readFileSync('assets/css/enhancements.css', 'utf-8');
-const allCss = mainCss + '\n' + enhancementsCss + '\n' + gsapCss;
+const prismThemeCss = fs.readFileSync('assets/css/prism-theme.css', 'utf-8');
+const allCss = mainCss + '\n' + enhancementsCss + '\n' + gsapCss + '\n' + prismThemeCss;
 
 // Read JS files
 const rendererJs = fs.readFileSync('assets/js/renderer.js', 'utf-8');
 const keyboardJs = fs.readFileSync('assets/js/keyboard.js', 'utf-8');
 const animationsJs = fs.readFileSync('assets/js/animations.js', 'utf-8');
 const robotJs = fs.readFileSync('assets/js/robot.js', 'utf-8');
+const presenterEffectsJs = fs.readFileSync('assets/js/presenter-effects.js', 'utf-8');
 
 // Include GSAP from node_modules
 const gsapJs = fs.readFileSync('node_modules/gsap/dist/gsap.min.js', 'utf-8');
 
-const allJs = gsapJs + '\n' + rendererJs + '\n' + keyboardJs + '\n' + animationsJs + '\n' + robotJs;
+const allJs = gsapJs + '\n' + rendererJs + '\n' + keyboardJs + '\n' + animationsJs + '\n' + robotJs + '\n' + presenterEffectsJs;
 
 // Build final HTML
 let html = template;

@@ -14,3 +14,5 @@ Problemas:
 - No dice cómo probar
 
 Si tú no defines el alcance, la IA lo define por ti.
+
+![Me vs The AI](assets/img/meme-2.jpg)

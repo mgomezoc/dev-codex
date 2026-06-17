@@ -7,4 +7,6 @@
 - No siempre tiene razón
 - No debería tocar todo sin límites
 
+![Realidad vs Expectativa](assets/img/meme-1.jpg)
+
 **La IA acelera el trabajo, pero no absorbe la responsabilidad.**
