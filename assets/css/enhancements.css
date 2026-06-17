@@ -1,0 +1,311 @@
+/* Enhanced animations and effects for presentation */
+
+/* ===== Parallax Effects ===== */
+.parallax-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.parallax-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+.parallax-layer-bg {
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.parallax-layer-mid {
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.parallax-layer-fg {
+  z-index: 2;
+}
+
+/* ===== Image Overlay Effects ===== */
+.image-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2) 0%, rgba(167, 139, 250, 0.2) 100%);
+  opacity: 0;
+  transition: opacity var(--transition);
+  pointer-events: none;
+  will-change: opacity;
+}
+
+.image-overlay:hover::after {
+  opacity: 1;
+}
+
+/* ===== Gradient Masks for Text Over Images ===== */
+.gradient-mask-text {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(148, 163, 184, 0.8) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.gradient-mask-dark {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.3) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== Enhanced Animations for Lists ===== */
+.stagger-list {
+  list-style: none;
+}
+
+.stagger-list li {
+  opacity: 0;
+  transform: translateX(-30px);
+  will-change: opacity, transform;
+}
+
+.stagger-list li.animated {
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===== Enhanced Animations for Code Blocks ===== */
+.code-block-enhanced {
+  opacity: 0;
+  transform: scale(0.95) translateY(20px);
+  will-change: opacity, transform;
+}
+
+.code-block-enhanced.animated {
+  animation: codeBlockEnter 0.6s ease forwards;
+}
+
+@keyframes codeBlockEnter {
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Syntax highlighting for code (can be enhanced further) */
+.code-keyword {
+  color: var(--accent);
+}
+
+.code-string {
+  color: var(--success);
+}
+
+.code-comment {
+  color: var(--muted);
+}
+
+/* ===== Slide-Specific Styling ===== */
+
+/* Hero slides */
+.slide.hero {
+  position: relative;
+}
+
+.slide.hero .slide-content {
+  z-index: 10;
+}
+
+/* Subtle entrance animation for hero */
+.slide.hero h1 {
+  animation: heroTitleEnter 0.8s ease forwards;
+}
+
+@keyframes heroTitleEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide.hero p {
+  animation: heroSubtitleEnter 0.8s ease 0.2s forwards;
+  opacity: 0;
+}
+
+@keyframes heroSubtitleEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Floating Elements (for use with GSAP) ===== */
+.float-element {
+  will-change: transform;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ===== Zoom In Effect ===== */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.zoom-in {
+  animation: zoomIn 0.6s ease forwards;
+}
+
+/* ===== Fade and Scale ===== */
+@keyframes fadeScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-scale {
+  animation: fadeScale 0.5s ease forwards;
+}
+
+/* ===== Pulse Animation ===== */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ===== Glow Effect ===== */
+.glow-effect {
+  filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.5));
+  transition: filter var(--transition);
+}
+
+.glow-effect:hover {
+  filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.8));
+}
+
+/* ===== Background Animations ===== */
+@keyframes backgroundShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-bg {
+  background-size: 200% 200%;
+  animation: backgroundShift 15s ease infinite;
+}
+
+/* ===== Slide Transition Animations ===== */
+.slide-content h1,
+.slide-content h2,
+.slide-content h3,
+.slide-content p,
+.slide-content li,
+.slide-content img {
+  will-change: opacity, transform;
+}
+
+.slide.active .slide-content > * {
+  animation: contentEnter 0.6s ease forwards;
+}
+
+@keyframes contentEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide.active .slide-content > :nth-child(1) { animation-delay: 0.1s; }
+.slide.active .slide-content > :nth-child(2) { animation-delay: 0.2s; }
+.slide.active .slide-content > :nth-child(3) { animation-delay: 0.3s; }
+.slide.active .slide-content > :nth-child(4) { animation-delay: 0.4s; }
+.slide.active .slide-content > :nth-child(5) { animation-delay: 0.5s; }
+
+/* ===== Reduced Motion Support ===== */
+@media (prefers-reduced-motion: reduce) {
+  .float-element,
+  .parallax-layer,
+  .image-overlay,
+  .stagger-list li,
+  .code-block-enhanced,
+  .slide.hero h1,
+  .slide.hero p,
+  .slide-content > * {
+    animation: none !important;
+    transform: none !important;
+    will-change: auto !important;
+  }
+
+  .parallax-layer,
+  .image-overlay,
+  .glow-effect {
+    transition: none !important;
+  }
+}

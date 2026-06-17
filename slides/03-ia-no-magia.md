@@ -1,3 +1,5 @@
+![Robot](assets/img/robot.png)
+
 # La IA no es magia
 
 - No reemplaza criterio

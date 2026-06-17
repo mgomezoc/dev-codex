@@ -37,6 +37,11 @@ class PresentationRenderer {
 
     // Update counter
     this.updateCounter();
+
+    // Notify robot assistant of slide change
+    if (window.robotAssistant) {
+      window.robotAssistant.onSlideChange(this.currentSlide + 1);
+    }
   }
 
   nextSlide() {
@@ -72,4 +77,13 @@ class PresentationRenderer {
 // Initialize renderer when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   window.renderer = new PresentationRenderer();
+
+  // Connect buttons to renderer
+  document.getElementById('next-btn').addEventListener('click', () => {
+    window.renderer.nextSlide();
+  });
+
+  document.getElementById('prev-btn').addEventListener('click', () => {
+    window.renderer.prevSlide();
+  });
 });
