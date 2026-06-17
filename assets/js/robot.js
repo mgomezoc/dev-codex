@@ -1,26 +1,43 @@
 // Clippy-style robot assistant animation with GSAP
 
 const robotAssistant = {
-  messages: {
-    default: [
-      "¡Hola! Soy tu asistente de IA",
-      "Te voy a guiar por esta presentación",
-      "Usa las flechas para navegar",
-      "¿Necesitas ayuda?",
-      "¡Dale que va!",
-      "La IA no es magia, es herramienta"
-    ],
-    slide2: ["Esto es importante para la IA"],
-    slide3: ["Mira que loco esto del robot"],
-    slide4: ["Codex y Claude son poderosos"],
-    slide10: ["Este prompt es útil"],
-    slide20: ["Configuración es clave"],
-    slide30: ["Ya casi terminamos!"]
+  slideMessages: {
+    1: ["¡Bienvenido a la charla! 🚀"],
+    2: ["Esto es lo importante de hoy"],
+    3: ["La IA no es magia, pero se acerca 😄"],
+    4: ["Codex y Claude son más que chats"],
+    5: ["Mi flujo de trabajo diario"],
+    6: ["Primero prepara, luego pide"],
+    7: ["El contexto es todo en IA"],
+    8: ["Los tokens son la moneda de la IA"],
+    9: ["Un prompt flojo = resultado flojo"],
+    10: ["La fórmula del prompt ganador"],
+    11: ["Mi secreto para mejores resultados"],
+    12: ["Entiende primero, luego modifica"],
+    13: ["No todo va en el prompt"],
+    14: ["AGENTS.md: el director de orquesta"],
+    15: ["CLAUDE.md: memoria del proyecto"],
+    16: ["Permisos: controla qué puede hacer"],
+    17: ["Skills: instrucciones reutilizables"],
+    18: ["Divide el trabajo entre agentes"],
+    19: ["Los subagentes tienen límites"],
+    20: ["Opus no siempre es la respuesta"],
+    21: ["Debugging requiere paciencia"],
+    22: ["Las herramientas realmente actúan"],
+    23: ["Git salva vidas (y código)"],
+    24: ["Seguridad: lo que NO compartir"],
+    25: ["Los errores que sí pasan"],
+    26: ["Lo que realmente funciona"],
+    27: ["Construyendo AGENTS.md en vivo"],
+    28: ["Auditando repos como pro"],
+    29: ["Debugging sin romper todo"],
+    30: ["La IA refuerza tu proceso"],
+    31: ["Empieza aquí mañana"],
+    32: ["El final: usa esto con cabeza"],
+    33: ["¿Preguntas? ¡Fuego a los cuestionamientos!"]
   },
 
   currentSlide: 1,
-  lastMessageTime: 0,
-  messageDelay: 5000,
   isMoving: false,
 
   init() {
@@ -32,7 +49,7 @@ const robotAssistant = {
   createRobot() {
     const robot = document.createElement('div');
     robot.id = 'robot-assistant';
-    robot.innerHTML = '<img src="assets/img/robot.png" alt="Robot Assistant">';
+    robot.innerHTML = '<img src="assets/img/robot-completo.png" alt="Robot Assistant">';
     document.body.appendChild(robot);
     this.element = robot;
   },
@@ -122,7 +139,7 @@ const robotAssistant = {
       ease: "back.out"
     });
 
-    gsap.delayedCall(3, () => {
+    gsap.delayedCall(4, () => {
       gsap.to(speech, {
         opacity: 0,
         y: 10,
@@ -136,21 +153,18 @@ const robotAssistant = {
   },
 
   getMessageForSlide(slideNum) {
-    const key = `slide${slideNum}`;
-    if (this.messages[key]) {
-      return this.messages[key][Math.floor(Math.random() * this.messages[key].length)];
+    const messages = this.slideMessages[slideNum];
+    if (messages) {
+      return messages[Math.floor(Math.random() * messages.length)];
     }
-    return this.messages.default[Math.floor(Math.random() * this.messages.default.length)];
+    return "¡Sigue adelante! 💪";
   },
 
   onSlideChange(slideNum) {
     this.currentSlide = slideNum;
-
-    if (slideNum % 5 === 0 && slideNum !== 1) {
-      setTimeout(() => {
-        this.showMessage(this.getMessageForSlide(slideNum));
-      }, 500);
-    }
+    setTimeout(() => {
+      this.showMessage(this.getMessageForSlide(slideNum));
+    }, 300);
   },
 
   setupEventListeners() {
