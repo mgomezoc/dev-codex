@@ -13,6 +13,10 @@ class KeyboardController {
       return;
     }
 
+    if (this.isTypingTarget(event.target)) {
+      return;
+    }
+
     switch (event.key) {
       case 'ArrowRight':
       case ' ':
@@ -40,6 +44,15 @@ class KeyboardController {
         this.toggleHelp();
         break;
     }
+  }
+
+  isTypingTarget(target) {
+    if (!target) {
+      return false;
+    }
+
+    const tagName = target.tagName?.toLowerCase();
+    return target.isContentEditable || tagName === 'input' || tagName === 'textarea' || tagName === 'select';
   }
 
   toggleHelp() {

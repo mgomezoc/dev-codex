@@ -1,14 +1,11 @@
-# Antes de soltarle una tarea a la IA
+# Antes de dejarla tocar el proyecto
 
-Revisar:
+Antes de pedir cambios:
 
-- Rama de Git limpia
-- Proyecto en carpeta correcta
-- Dependencias instaladas
-- Comandos de build/test conocidos
-- Reglas del proyecto disponibles
-- Archivos sensibles protegidos
+- Rama correcta y diff conocido
+- Carpeta/proyecto correcto
+- Build/test disponibles
+- Reglas y permisos visibles
+- Alcance escrito en una frase
 
-Trabajar siempre en rama separada. No en main.
-
-> Nunca, NUNCA, le des a la IA acceso de escritura sin revisar la rama. Esto es innegociable.
+Si toca servidor: plan visible, cambio acotado, confirmación y validación.

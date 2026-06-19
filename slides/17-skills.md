@@ -1,22 +1,11 @@
-# Skills: instrucciones reutilizables
+# Skills y agentes: trabajo repetible
 
-Una skill sirve para guardar un flujo repetible y una forma limpia de aplicar
-buena practica.
+Cuando una revisión se repite, conviene convertirla en procedimiento:
 
-`skill != comando magico.`
+- Skill: instrucciones, límites y criterio de salida
+- Agente contenido: orden, claridad y repetición
+- Agente diseño: jerarquía, espacios y legibilidad
+- Agente frontend: JS, navegación, copy buttons y robot
+- Agente QA: Chrome, overflow, build/test y evidencia
 
-Caracteristicas:
-
-- Mismo objetivo repetible (auditoria, debug, verify, docs)
-- Reglas y contexto definidos
-- Scripts/referencias opcionales
-- Criterio claro de cuando usarla
-
-```
-/review-pr
-/debug
-/run
-/verify
-```
-
-**Primero detecta tareas repetidas. Luego crea o reutiliza skills.**
+**No es teatro: cada rol revisa con un criterio distinto.**

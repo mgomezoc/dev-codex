@@ -38,6 +38,10 @@ Luego abrir `http://localhost:8000/index.html`.
 - No revertir cambios pendientes del usuario.
 - No mezclar refactors amplios con cambios visuales puntuales.
 - No agregar dependencias si CSS/JS vanilla resuelve el problema razonablemente.
+- Mantener CSS y JavaScript en archivos externos; no agregar `<style>`, `<script>` inline ni `style=""` en slides/template.
+- Crear clases o IDs descriptivos para elementos visuales nuevos y centralizar estilos en `assets/css/`.
+- Evitar `element.style` para presentacion visual; preferir clases CSS, atributos `data-*` o variables ya existentes.
+- Excepcion: GSAP puede crear estilos runtime de `transform`/`opacity` para animaciones; no usarlo para estilos estaticos.
 - Mantener las fuentes en UTF-8.
 - Mantener textos visibles en espanol.
 - Verificar build despues de cambios en slides, CSS, JS o template.

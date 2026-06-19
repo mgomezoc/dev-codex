@@ -4,14 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IA para programar en el día a día</title>
-  <!-- Prism.js for syntax highlighting -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-dark.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">
+  <link rel="icon" href="assets/img/icono-one-card.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/enhancements.css">
+  <link rel="stylesheet" href="assets/css/gsap-defaults.css">
   <link rel="stylesheet" href="assets/css/prism-theme.css">
-
-  <style>
-    <!-- CSS will be injected here by build.js -->
-  </style>
 </head>
 <body>
   <div id="presentation">
@@ -20,7 +17,15 @@
 
   <div id="controls" class="controls">
     <button id="prev-btn" class="nav-btn">← Anterior</button>
-    <span id="slide-counter">0 / 0</span>
+    <div id="slide-jump" class="slide-jump">
+      <button id="slide-counter" class="slide-counter-button" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="slide-jump-panel">0 / 0</button>
+      <form id="slide-jump-panel" class="slide-jump-panel hidden" aria-label="Cambiar slide">
+        <label class="sr-only" for="slide-jump-input">Numero de slide</label>
+        <input id="slide-jump-input" class="slide-jump-input" type="number" min="1" step="1" inputmode="numeric" autocomplete="off">
+        <span id="slide-jump-total" class="slide-jump-total">/ 0</span>
+        <button id="slide-jump-submit" class="slide-jump-submit" type="submit">Ir</button>
+      </form>
+    </div>
     <button id="next-btn" class="nav-btn">Siguiente →</button>
   </div>
 
@@ -38,26 +43,11 @@
     </div>
   </div>
 
-  <script>
-    // JS will be injected here by build.js
-  </script>
-
-  <!-- Prism.js for syntax highlighting -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-php.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markdown.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-
-  <script>
-    // Highlight code blocks when slide changes
-    const originalShowSlide = PresentationRenderer.prototype.showSlide;
-    PresentationRenderer.prototype.showSlide = function(index) {
-      originalShowSlide.call(this, index);
-      setTimeout(() => Prism.highlightAllUnder(this.slides[this.currentSlide]), 100);
-    };
-  </script>
+  <script src="assets/vendor/gsap.min.js" defer></script>
+  <script src="assets/js/renderer.js" defer></script>
+  <script src="assets/js/keyboard.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+  <script src="assets/js/robot.js" defer></script>
+  <script src="assets/js/presenter-effects.js" defer></script>
 </body>
 </html>

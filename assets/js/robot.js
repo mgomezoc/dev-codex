@@ -3,38 +3,23 @@
 const robotAssistant = {
   slideMessages: {
     1: ["¡Bienvenido a la charla! 🚀"],
-    2: ["Esto es lo importante de hoy"],
-    3: ["La IA no es magia, pero se acerca 😄"],
-    4: ["Codex y Claude son más que chats"],
-    5: ["Mi flujo de trabajo diario"],
-    6: ["Primero prepara, luego pide"],
-    7: ["El contexto es todo en IA"],
-    8: ["Los tokens son la moneda de la IA"],
-    9: ["Un prompt flojo = resultado flojo"],
-    10: ["La fórmula del prompt ganador"],
-    11: ["Mi secreto para mejores resultados"],
-    12: ["Entiende primero, luego modifica"],
-    13: ["No todo va en el prompt"],
-    14: ["AGENTS.md: el director de orquesta"],
-    15: ["CLAUDE.md: memoria del proyecto"],
-    16: ["Permisos: controla qué puede hacer"],
-    17: ["Skills: instrucciones reutilizables"],
-    18: ["Divide el trabajo entre agentes"],
-    19: ["Los subagentes tienen límites"],
-    20: ["Opus no siempre es la respuesta"],
-    21: ["Debugging requiere paciencia"],
-    22: ["Las herramientas realmente actúan"],
-    23: ["Git salva vidas (y código)"],
-    24: ["Seguridad: lo que NO compartir"],
-    25: ["Los errores que sí pasan"],
-    26: ["Lo que realmente funciona"],
-    27: ["Construyendo AGENTS.md en vivo"],
-    28: ["Auditando repos como pro"],
-    29: ["Debugging sin romper todo"],
-    30: ["La IA refuerza tu proceso"],
-    31: ["Empieza aquí mañana"],
-    32: ["El final: usa esto con cabeza"],
-    33: ["¿Preguntas? ¡Fuego a los cuestionamientos!"]
+    2: ["La IA acelera, no decide sola"],
+    3: ["Ahora sí pueden operar sobre el repo"],
+    4: ["Plan pequeño, validación clara"],
+    5: ["Prepara antes de pedir cambios"],
+    6: ["El contexto útil manda"],
+    7: ["Prompt flojo, resultado flojo"],
+    8: ["La fórmula evita inventos"],
+    9: ["Primero entiende el repo"],
+    10: ["Reglas permanentes ahorran contexto"],
+    11: ["Permisos: controla qué puede tocar"],
+    12: ["Skills y agentes ordenan el trabajo"],
+    13: ["Debugging requiere método"],
+    14: ["Seguridad con alcance y evidencia"],
+    15: ["Demo controlado: plan antes de deploy"],
+    16: ["Revisa evidencia antes de aceptar"],
+    17: ["Empieza pequeño y verificable"],
+    18: ["Cierre: dirige la herramienta"]
   },
 
   currentSlide: 1,
@@ -50,8 +35,12 @@ const robotAssistant = {
 
   createRobot() {
     const robot = document.createElement('div');
+    const robotImage = document.createElement('img');
+
     robot.id = 'robot-assistant';
-    robot.innerHTML = '<img src="assets/img/robot-completo.png" alt="Robot Assistant">';
+    robotImage.src = 'assets/img/robot-completo.png';
+    robotImage.alt = 'Robot Assistant';
+    robot.appendChild(robotImage);
     document.body.appendChild(robot);
     this.element = robot;
   },

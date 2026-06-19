@@ -10,11 +10,8 @@ Dame:
 2. Archivos que revisarías
 3. Comandos para validar
 4. Cambio mínimo recomendado
-```
 
-Después:
-
-```
+Después de revisar:
 Implementa la solución más probable.
 No hagas refactor general.
 Ejecuta prueba y resume diff.

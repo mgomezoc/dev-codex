@@ -1,19 +1,23 @@
-# Prompt maestro: primero entender, luego tocar
+# Prompt para que Codex entienda el repo
 
 ```
-Analiza este proyecto antes de modificar.
+Estoy en el repo de una presentación web interactiva sobre Codex y Claude.
+Antes de tocar código, analiza cómo funciona el proyecto.
 
-Quiero que identifiques:
-- Qué hace el sistema
-- Tecnologías usadas
-- Estructura de carpetas
-- Módulos principales
-- Flujo de negocio
-- Comandos: correr, probar, construir
-- Riesgos técnicos
-- Archivos que no deben tocarse
+Lee primero: AGENTS.md, package.json, build.js, template.html,
+slides/ y assets/js/.
 
-No hagas cambios. Primero entrega reporte y plan por fases.
+Quiero un mapa rápido para trabajar con seguridad:
+- cómo se generan los slides desde Markdown
+- qué archivos controlan navegación, robot, animaciones y estilos
+- qué reglas del proyecto no debo romper
+- comandos para compilar y validar
+- riesgos visuales o de JS que conviene revisar
+- una mejora pequeña y demostrable para esta presentación
+
+No hagas cambios.
+Entrega:
+1. resumen en 5 bullets
+2. tabla: hallazgo, evidencia, riesgo, siguiente paso
+3. recomendación de primer cambio pequeño para ejecutar en vivo
 ```
-
-**Guarda este prompt. Úsalo siempre primero.**

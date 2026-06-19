@@ -1,18 +1,13 @@
-# Prompt flojo = resultado flojo
+# Prompt flojo vs prompt útil
 
-```
-Haz un dashboard para ventas.
-```
+Malo:
 
-Problemas:
+`Haz un dashboard para ventas.`
 
-- No dice de dónde salen los datos
-- No dice diseño
-- No dice validaciones
-- No dice permisos
-- No dice si puede modificar archivos
-- No dice cómo probar
+Problema: no dice datos, diseño, permisos, validación ni alcance.
 
-Si tú no defines el alcance, la IA lo define por ti.
+Mejor:
 
-![Me vs The AI](assets/img/meme-2.jpg)
+- Objetivo: dashboard resumen
+- Antes de modificar: archivos, datos, métricas y riesgos
+- Restricciones: sin librerías nuevas, sin tocar BD ni permisos

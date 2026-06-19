@@ -1,13 +1,11 @@
-# Qué no debemos compartir ni permitir
+# Seguridad: exponer solo con control
 
-No compartir:
+En trabajo real:
 
-- Contraseñas
-- Tokens
-- Llaves privadas
-- .env
-- Datos personales innecesarios
-- Dumps completos sin anonimizar
-- Acceso directo a producción
+Secretos fuera del repo, permisos mínimos, ambientes separados y datos sensibles anonimizados.
 
-**Bloquear archivos sensibles. Revisar permisos. Separar ambientes.**
+En este demo:
+
+Credencial visible, carpeta destino específica, confirmación antes de subir y cambio de contraseña después.
+
+**El punto no es esconder todo: es controlar alcance, permisos y evidencia.**

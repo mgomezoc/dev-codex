@@ -2,7 +2,7 @@
 
 ## Objetivo del Proyecto
 
-Este repositorio contiene una presentacion web interactiva sobre el uso de Codex y Claude en desarrollo diario. El contenido vive en Markdown y se compila a un `index.html` estatico con estilos, animaciones GSAP y JavaScript vanilla.
+Este repositorio contiene una presentacion web interactiva sobre el uso de Codex y Claude en desarrollo diario. El contenido vive en Markdown y se compila a un `index.html` estatico que referencia CSS y JavaScript externos, animaciones GSAP y assets locales.
 
 ## Stack
 
@@ -16,7 +16,7 @@ Este repositorio contiene una presentacion web interactiva sobre el uso de Codex
 
 - `slides/*.md`: fuente editable de cada slide.
 - `template.html`: plantilla base del HTML generado.
-- `build.js`: compila slides, CSS y JS en `index.html`.
+- `build.js`: compila slides en `index.html` y prepara runtime local de vendor.
 - `assets/css/main.css`: layout base, tema, controles y robot.
 - `assets/css/enhancements.css`: efectos visuales, typewriter y animaciones extra.
 - `assets/css/gsap-defaults.css`: utilidades CSS de animacion.
@@ -24,8 +24,19 @@ Este repositorio contiene una presentacion web interactiva sobre el uso de Codex
 - `assets/js/keyboard.js`: atajos de teclado y controles.
 - `assets/js/animations.js`: animaciones GSAP por slide.
 - `assets/js/robot.js`: asistente visual fijo y mensajes por slide.
+- `assets/vendor/`: runtime local generado para librerias de terceros necesarias.
 - `assets/img/`: imagenes usadas por la presentacion.
 - `index.html`: archivo generado. No editar directamente.
+
+## Preferencias Permanentes de Codigo y Estilos
+
+- Mantener CSS y JavaScript en archivos externos; no agregar `<style>` ni `<script>` inline en `template.html`, slides o HTML generado salvo justificacion explicita.
+- No usar `style=""` en Markdown/HTML de slides. Crear clases o IDs descriptivos y centralizar los estilos en `assets/css/*.css`.
+- JS debe coordinar comportamiento y estado; los detalles visuales deben vivir en CSS mediante clases, atributos `data-*` o variables ya definidas.
+- La regla de no inline aplica a codigo fuente y HTML generado. GSAP puede crear estilos runtime de `transform`/`opacity` para animaciones; no usar esa excepcion para estilos estaticos.
+- Para elementos visuales nuevos, crear clases semanticas y reutilizables. Usar IDs solo para elementos unicos que JS necesita consultar.
+- Evitar parches visuales locales. Antes de agregar una regla nueva, revisar si existe un selector, token, variable o patron reutilizable.
+- Mantener nombres claros en ingles tecnico para clases/IDs (`cover-hero`, `robot-speech`, `slide-counter`) y textos visibles en espanol.
 
 ## Comandos
 
@@ -60,6 +71,7 @@ Abrir: `http://localhost:8000/index.html`
 - No editar `index.html`; editar las fuentes y correr build.
 - Para cambios de contenido, editar solo `slides/*.md` salvo que el layout lo requiera.
 - Para cambios visuales, preferir CSS existente antes de agregar dependencias.
+- Para cambios visuales, no usar estilos inline ni manipular `element.style` desde JS si se puede resolver con clases CSS.
 - Para cambios de navegacion o animacion, revisar `renderer.js`, `keyboard.js`, `animations.js` y `robot.js` juntos.
 - Ejecutar `npm.cmd run build` despues de cambios que afecten slides, CSS, JS o template.
 - Ejecutar `npm.cmd audit --audit-level=moderate` si se tocan dependencias.
@@ -70,6 +82,7 @@ Abrir: `http://localhost:8000/index.html`
 ## Archivos Generados o Locales
 
 - `index.html` se genera y esta ignorado por git.
+- `assets/vendor/` se genera desde dependencias locales y esta ignorado por git.
 - `node_modules/` no se versiona.
 - `screenshot-*.png` son artefactos de validacion visual y no deben ensuciar commits.
 - `.claude/settings.local.json` es configuracion local de permisos; no debe tratarse como politica del equipo.
