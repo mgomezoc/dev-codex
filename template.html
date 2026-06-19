@@ -43,6 +43,19 @@
     </div>
   </div>
 
+  <div id="secret-qa-modal" class="secret-qa-modal hidden" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="secret-qa-title">
+    <div class="secret-qa-backdrop" data-secret-qa-close></div>
+    <section id="secret-qa-panel" class="secret-qa-panel" tabindex="-1">
+      <button class="secret-qa-close" type="button" aria-label="Cerrar preguntas secretas" data-secret-qa-close>&times;</button>
+      <div class="secret-qa-header">
+        <h2 id="secret-qa-title">Preguntas que siempre salen</h2>
+      </div>
+      <div class="secret-qa-body">
+        <!-- Secret robot Q&A will be injected here by build.js -->
+      </div>
+    </section>
+  </div>
+
   <script src="assets/vendor/gsap.min.js" defer></script>
   <script src="assets/js/renderer.js" defer></script>
   <script src="assets/js/keyboard.js" defer></script>

@@ -5,6 +5,7 @@ const { marked } = require('marked');
 const templatePath = 'template.html';
 const slidesDir = 'slides';
 const outputPath = 'index.html';
+const secretRobotFaqPath = path.join(slidesDir, '_robot-faq.md');
 const vendorDir = path.join('assets', 'vendor');
 const gsapSource = path.join('node_modules', 'gsap', 'dist', 'gsap.min.js');
 const gsapTarget = path.join(vendorDir, 'gsap.min.js');
@@ -12,7 +13,7 @@ const gsapTarget = path.join(vendorDir, 'gsap.min.js');
 const template = fs.readFileSync(templatePath, 'utf-8');
 
 const slideFiles = fs.readdirSync(slidesDir)
-  .filter((file) => file.endsWith('.md'))
+  .filter((file) => file.endsWith('.md') && !file.startsWith('_'))
   .sort();
 
 console.log(`Found ${slideFiles.length} slides`);
@@ -28,13 +29,22 @@ const slides = slideFiles.map((file, index) => {
   </section>`;
 });
 
+const secretRobotFaqHtml = fs.existsSync(secretRobotFaqPath)
+  ? marked(fs.readFileSync(secretRobotFaqPath, 'utf-8'))
+  : '';
+
 fs.mkdirSync(vendorDir, { recursive: true });
 fs.copyFileSync(gsapSource, gsapTarget);
 
-const html = template.replace(
-  '<!-- Slides will be injected here by build.js -->',
-  slides.join('\n')
-);
+const html = template
+  .replace(
+    '<!-- Slides will be injected here by build.js -->',
+    slides.join('\n')
+  )
+  .replace(
+    '<!-- Secret robot Q&A will be injected here by build.js -->',
+    secretRobotFaqHtml
+  );
 
 fs.writeFileSync(outputPath, html);
 
@@ -57,6 +67,8 @@ console.log('  - assets/vendor/gsap.min.js');
 console.log('\nOK Image assets (referenced, not inlined):');
 console.log('  - assets/img/background.png (5.9MB)');
 console.log('  - assets/img/robot.png (2.2MB)');
+console.log('  - assets/img/meme-2.jpg (49KB)');
+console.log('  - assets/img/meme-3.png (6.1MB)');
 console.log('  - assets/img/one_card-logo.png (17KB)');
 console.log('  - assets/img/icono-one-card.png (5.1K)');
 console.log('\nNote: CSS and JS stay in external files; index.html only contains generated slide markup.');

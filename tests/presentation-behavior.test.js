@@ -20,6 +20,7 @@ function createElement(id = '') {
     listeners,
     dataset: {},
     style: {},
+    attributes: {},
     textContent: '',
     classList: {
       add(className) {
@@ -42,6 +43,12 @@ function createElement(id = '') {
     addEventListener(type, handler) {
       listeners[type] ||= [];
       listeners[type].push(handler);
+    },
+    setAttribute(name, value) {
+      this.attributes[name] = value;
+    },
+    focus() {
+      this.isFocused = true;
     },
     appendChild(child) {
       this.children.push(child);
@@ -86,6 +93,83 @@ test('robot assistant is exposed globally for slide-change notifications', () =>
 
   assert.equal(typeof sandbox.window.robotAssistant, 'object');
   assert.equal(typeof sandbox.window.robotAssistant.onSlideChange, 'function');
+});
+
+test('robot click opens the secret Q&A modal', () => {
+  const domContentLoadedCallbacks = [];
+  const queuedTimeouts = [];
+  const keydownHandlers = [];
+  const body = createElement('body');
+  const modal = createElement('secret-qa-modal');
+  const panel = createElement('secret-qa-panel');
+  const closeButton = createElement('secret-qa-close');
+  const previousFocus = createElement('previous-focus');
+
+  modal.classList.add('hidden');
+  modal.querySelectorAll = (selector) => (
+    selector === '[data-secret-qa-close]' ? [closeButton] : []
+  );
+  panel.querySelectorAll = () => [closeButton];
+
+  const sandbox = {
+    console,
+    window: {},
+    document: {
+      body,
+      activeElement: previousFocus,
+      readyState: 'loading',
+      createElement,
+      getElementById(id) {
+        if (id === 'secret-qa-modal') return modal;
+        if (id === 'secret-qa-panel') return panel;
+        return null;
+      },
+      addEventListener(type, handler) {
+        if (type === 'DOMContentLoaded') {
+          domContentLoadedCallbacks.push(handler);
+        }
+
+        if (type === 'keydown') {
+          keydownHandlers.push(handler);
+        }
+      },
+    },
+    gsap: {
+      timeline() {
+        return { to() { return this; } };
+      },
+      to() {},
+      killTweensOf() {},
+    },
+    setTimeout(fn, delay) {
+      queuedTimeouts.push({ fn, delay });
+      return queuedTimeouts.length;
+    },
+    clearTimeout() {},
+  };
+
+  vm.runInNewContext(readAsset('assets/js/robot.js'), sandbox);
+  domContentLoadedCallbacks.forEach((handler) => handler());
+
+  const robot = body.children.find((child) => child.id === 'robot-assistant');
+  assert.ok(robot);
+  assert.equal(robot.attributes.role, 'button');
+  assert.equal(robot.attributes['aria-controls'], 'secret-qa-modal');
+  assert.equal(robot.listeners.click.length, 1);
+  assert.equal(keydownHandlers.length, 1);
+
+  robot.listeners.click[0]({
+    preventDefault() {},
+    stopPropagation() {},
+  });
+
+  assert.equal(modal.classList.contains('hidden'), false);
+  assert.equal(modal.classList.contains('is-visible'), true);
+  assert.equal(modal.attributes['aria-hidden'], 'false');
+  assert.equal(body.classList.contains('secret-qa-open'), true);
+
+  queuedTimeouts[0].fn();
+  assert.equal(panel.isFocused, true);
 });
 
 test('navigation buttons have one click handler each after initialization', () => {

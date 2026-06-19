@@ -26,9 +26,14 @@ const robotAssistant = {
   isMoving: false,
   pendingMessageTimer: null,
   isSpeechVisible: false,
+  secretModal: null,
+  secretPanel: null,
+  secretCloseTimer: null,
+  lastFocusedElement: null,
 
   init() {
     this.createRobot();
+    this.setupSecretModal();
     this.startAnimation();
     this.setupEventListeners();
   },
@@ -38,11 +43,28 @@ const robotAssistant = {
     const robotImage = document.createElement('img');
 
     robot.id = 'robot-assistant';
+    robot.tabIndex = 0;
+    this.setElementAttribute(robot, 'role', 'button');
+    this.setElementAttribute(robot, 'aria-label', 'Abrir preguntas secretas de la presentación');
+    this.setElementAttribute(robot, 'aria-haspopup', 'dialog');
+    this.setElementAttribute(robot, 'aria-controls', 'secret-qa-modal');
     robotImage.src = 'assets/img/robot-completo.png';
-    robotImage.alt = 'Robot Assistant';
+    robotImage.alt = '';
+    this.setElementAttribute(robotImage, 'aria-hidden', 'true');
     robot.appendChild(robotImage);
     document.body.appendChild(robot);
     this.element = robot;
+  },
+
+  setElementAttribute(element, name, value) {
+    if (!element) return;
+
+    if (typeof element.setAttribute === 'function') {
+      element.setAttribute(name, value);
+      return;
+    }
+
+    element[name] = value;
   },
 
   startAnimation() {
@@ -144,6 +166,135 @@ const robotAssistant = {
     });
   },
 
+  setupSecretModal() {
+    if (!document.getElementById) return;
+
+    this.secretModal = document.getElementById('secret-qa-modal');
+    this.secretPanel = document.getElementById('secret-qa-panel');
+
+    if (!this.secretModal || !this.secretPanel) {
+      return;
+    }
+
+    const closeTriggers = this.secretModal.querySelectorAll
+      ? Array.from(this.secretModal.querySelectorAll('[data-secret-qa-close]'))
+      : [];
+
+    closeTriggers.forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        this.closeSecretModal(true);
+      });
+    });
+
+    document.addEventListener('keydown', (event) => {
+      this.handleSecretModalKeydown(event);
+    });
+  },
+
+  isSecretModalOpen() {
+    return Boolean(this.secretModal?.classList?.contains('is-visible'));
+  },
+
+  openSecretModal() {
+    if (!this.secretModal || !this.secretPanel) {
+      return false;
+    }
+
+    if (this.secretCloseTimer) {
+      clearTimeout(this.secretCloseTimer);
+      this.secretCloseTimer = null;
+    }
+
+    this.lastFocusedElement = document.activeElement;
+    this.hideMessage();
+    this.secretModal.classList.remove('hidden');
+    this.secretModal.classList.remove('is-closing');
+    this.secretModal.classList.add('is-visible');
+    document.body?.classList?.add('secret-qa-open');
+    this.setElementAttribute(this.secretModal, 'aria-hidden', 'false');
+
+    const focusPanel = () => {
+      this.secretPanel?.focus?.();
+    };
+
+    if (typeof requestAnimationFrame === 'function') {
+      requestAnimationFrame(focusPanel);
+    } else {
+      setTimeout(focusPanel, 0);
+    }
+
+    return true;
+  },
+
+  closeSecretModal(restoreFocus = false) {
+    if (!this.secretModal) {
+      return;
+    }
+
+    this.secretModal.classList.remove('is-visible');
+    this.secretModal.classList.add('is-closing');
+    document.body?.classList?.remove('secret-qa-open');
+    this.setElementAttribute(this.secretModal, 'aria-hidden', 'true');
+
+    this.secretCloseTimer = setTimeout(() => {
+      if (!this.secretModal?.classList?.contains('is-visible')) {
+        this.secretModal?.classList?.add('hidden');
+        this.secretModal?.classList?.remove('is-closing');
+      }
+      this.secretCloseTimer = null;
+    }, 260);
+
+    if (restoreFocus) {
+      this.lastFocusedElement?.focus?.();
+    }
+  },
+
+  getSecretModalFocusableElements() {
+    if (!this.secretPanel?.querySelectorAll) {
+      return [];
+    }
+
+    return Array.from(this.secretPanel.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'))
+      .filter((element) => !element.disabled);
+  },
+
+  handleSecretModalKeydown(event) {
+    if (!this.isSecretModalOpen()) {
+      return;
+    }
+
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      this.closeSecretModal(true);
+      return;
+    }
+
+    if (event.key !== 'Tab') {
+      return;
+    }
+
+    const focusableElements = this.getSecretModalFocusableElements();
+    if (focusableElements.length === 0) {
+      event.preventDefault();
+      this.secretPanel?.focus?.();
+      return;
+    }
+
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    if (event.shiftKey && document.activeElement === firstElement) {
+      event.preventDefault();
+      lastElement.focus?.();
+      return;
+    }
+
+    if (!event.shiftKey && document.activeElement === lastElement) {
+      event.preventDefault();
+      firstElement.focus?.();
+    }
+  },
+
   getMessageForSlide(slideNum) {
     const messages = this.slideMessages[slideNum];
     if (messages) {
@@ -168,8 +319,22 @@ const robotAssistant = {
 
   setupEventListeners() {
     if (this.element) {
-      this.element.addEventListener('click', () => {
-        this.showMessage(this.getMessageForSlide(this.currentSlide));
+      this.element.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (!this.openSecretModal()) {
+          this.showMessage(this.getMessageForSlide(this.currentSlide));
+        }
+      });
+
+      this.element.addEventListener('keydown', (event) => {
+        if (event.key !== 'Enter' && event.key !== ' ') {
+          return;
+        }
+
+        event.preventDefault();
+        this.openSecretModal();
       });
     }
   }

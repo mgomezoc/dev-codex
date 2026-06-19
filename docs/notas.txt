@@ -1,0 +1,166 @@
+INTRODUCCIÓN
+
+Esta es una plática corta. Muchos desarrolladores ya no empiezan siempre por Stack Overflow; ahora usamos IA como primer apoyo para explorar, entender errores o generar una primera solución.
+
+Pero ahora ya no se trata solamente de una herramienta para responder preguntas. Con herramientas como Codex o Claude Code, la IA puede leer archivos, editar código y ejecutar comandos, siempre dentro de los permisos y el entorno que le demos.
+
+Por eso debemos tener cuidado de no caer en descuidos técnicos, de no dejar de revisar lo que se está haciendo por comodidad o flojera, y de no confiar ciegamente en los resultados por falta de conocimiento. La responsabilidad final sigue siendo nuestra.
+
+SLIDE 1
+
+Cuando digo "Codex + Claude + buenas prácticas + criterio técnico", la parte clave es el criterio técnico.
+
+La IA puede escribir código, analizar archivos y ejecutar tareas, pero yo sigo siendo responsable de decidir si lo que propone tiene sentido, si rompe algo, si está correctamente probado y si es seguro.
+
+No se trata de obedecer a la IA; se trata de usarla como una herramienta bajo supervisión técnica.
+
+SLIDE 2
+Al final del día, si hay un problema de seguridad en la API, Oscar Ramos no va a llamar a Codex para pedir explicaciones; va a venir con nosotros.
+
+SLIDE 3
+Ya no es copiar y pegar todo el código de un archivo. Ahora, si les damos acceso al proyecto, pueden revisar archivos, detectar cuáles son relevantes, editar código, ejecutar pruebas y, con herramientas configuradas como Chrome o MCP, validar visualmente y preparar reportes con los resultados.
+
+SLIDE 4:
+“La IA puede escribir código rápido, pero el diff es donde yo recupero control técnico.”
+
+Ahí veo qué tocó realmente, no solo lo que dice que tocó.
+
+SLIDE 5:
+Para empezar a trabajar en un requerimiento con IA, siempre conviene poner buenas bases: contexto, alcance, reglas, permisos y forma de validar.
+
+Después la conversación puede fluir más natural, pero al inicio hay que dejar claro qué problema estamos resolviendo y cómo vamos a saber que quedó bien.
+
+
+SLIDE 6:
+Aquí la idea es separar prompt de contexto.
+
+El prompt es la instrucción puntual, pero el contexto es todo lo que ayuda a que la IA no trabaje a ciegas: conversación, archivos, documentación, reglas y errores reales.
+
+Un buen punto para decir aquí es: "más contexto no siempre significa mejor resultado; si le doy ruido, también puede confundirse. Lo importante es darle contexto útil".
+
+El ejemplo malo es "arregla este módulo", porque obliga a la IA a adivinar. El ejemplo mejor primero pide análisis, limita el alcance y pide riesgos antes de modificar.
+
+SLIDE 7:
+Aquí es donde se puede salir de control el trabajo si el prompt es demasiado abierto.
+
+Por ejemplo, en proyectos como Integrador o Intranet, el código ya tiene una forma establecida de trabajar: estructura, librerías, permisos, estilos, convenciones y reglas internas.
+
+Si yo solo digo "haz un dashboard para ventas", la IA tiene que llenar demasiados huecos con supuestos. Puede elegir archivos incorrectos, proponer una librería nueva, tocar permisos que no debía, o resolverlo de una forma que no encaja con el proyecto.
+
+Por eso el prompt útil no solo dice qué quiero; también dice qué debe revisar antes, qué no puede tocar y cómo voy a validar que terminó bien.
+
+La idea no es escribir prompts largos por escribirlos largos. La idea es quitarle espacio a la IA para inventar decisiones que deberían ser nuestras.
+
+SLIDE 8:
+Esta fórmula es mi checklist mental antes de pedirle trabajo a la IA.
+
+No siempre tengo que escribir los siete puntos como formato largo, pero sí conviene tenerlos claros:
+quién quiero que sea en esa tarea, qué contexto necesita, qué quiero lograr, qué sí puede tocar, qué no puede tocar, cómo voy a validar y cómo quiero recibir la respuesta.
+
+La frase importante es: mientras más específica sea la tarea, menos espacio le dejo para inventar decisiones que me corresponden a mí.
+
+SLIDE 9:
+Este prompt es para entrar a un repo nuevo o a una parte del proyecto que no conozco bien.
+
+Lo importante es que no empieza pidiendo cambios. Primero le pido que lea archivos clave y me entregue un mapa del proyecto.
+
+Esto evita el error típico de pedir "hazme una mejora" sin que la IA entienda cómo se compila, dónde vive la navegación, qué archivos no debe tocar o cuáles son los riesgos.
+
+En el demo, este prompt sirve para que Codex analice esta misma presentación y proponga un cambio pequeño que podamos revisar en vivo.
+
+SLIDE 10:
+Aquí hablamos de no repetir instrucciones cada vez.
+
+Si siempre tengo que decir "no edites index.html", "corre npm.cmd run build", "mantén CSS y JS externos", entonces eso no debería vivir solo en el prompt: debería vivir en una regla del proyecto.
+
+Para Codex eso es AGENTS.md. Para Claude Code puede ser CLAUDE.md. La idea es que las reglas permanentes guarden el comportamiento esperado del asistente.
+
+El prompt queda para la tarea específica; las reglas quedan para el comportamiento permanente.
+
+SLIDE 11:
+Permisos es donde mucha gente se confía.
+
+La IA puede ser muy útil leyendo archivos y ejecutando comandos, pero no todo debe estar abierto siempre.
+
+Lo correcto es definir qué puede leer, qué puede editar, qué comandos puede correr, qué rutas están prohibidas y cuándo debe pedir aprobación.
+
+En Codex esto se relaciona con sandbox, workspace y approvals. Si un agente tiene acceso amplio, entonces la revisión y la validación se vuelven todavía más importantes.
+
+La idea no es bloquear todo por miedo; es darle el acceso mínimo necesario para hacer bien la tarea.
+
+SLIDE 12:
+Skills y agentes sirven para convertir trabajos repetibles en procedimientos.
+
+Si cada vez que reviso diseño tengo que explicar "mira espacios, jerarquía, tamaños, overflow, legibilidad", eso puede convertirse en una skill o en un agente especializado.
+
+Lo mismo para QA, frontend, contenido o debugging. Cada rol revisa con un criterio distinto.
+
+Aquí puedo mencionar que es útil porque no todo lo debe revisar el mismo "modo general" de IA. A veces conviene pedirle que actúe con una responsabilidad concreta.
+
+SLIDE 13:
+Para debugging, la peor instrucción es "arréglalo".
+
+Cuando digo eso, la IA puede saltarse el diagnóstico y empezar a cambiar cosas por intuición.
+
+El flujo más seguro es: error, hipótesis, validación, cambio mínimo, prueba y resumen.
+
+Primero le pido posibles causas, archivos a revisar y comandos para validar. Después, con más información, le pido implementar la solución más probable sin hacer refactor general.
+
+La idea es que debugging con IA siga siendo debugging, no adivinanza automática.
+
+SLIDE 14:
+Este slide es importante porque el demo usa una credencial visible.
+
+En un trabajo real, secretos fuera del repo, permisos mínimos, ambientes separados y datos sensibles anonimizados.
+
+En este demo lo hacemos controlado: carpeta destino específica, confirmación antes de subir, validación posterior y cambio de contraseña después.
+
+La frase clave es: el punto no es esconder todo; es controlar alcance, permisos y evidencia.
+
+El meme ayuda a recordar lo que pasa cuando damos acceso total sin límites y luego actuamos como si nada.
+
+SLIDE 15:
+Aquí empieza la parte práctica del demo de publicación.
+
+Lo profesional no es solamente que Codex pueda subir archivos. Lo profesional es que primero compile, detecte qué archivos son necesarios, revise la carpeta remota, haga un dry-run y espere confirmación.
+
+Dry-run significa simular o listar lo que haría antes de ejecutarlo. En este caso: mostrar qué archivos subiría sin subirlos todavía.
+
+Si todo se ve bien, entonces se confirma y después se valida la URL, estilos, imágenes, JS, navegación y consola.
+
+SLIDE 16:
+Después del demo no basta con decir "funcionó".
+
+Hay que revisar evidencia: qué plan dijo que iba a seguir, qué archivos tocó realmente, si corrió build o tests, si validó la URL y si el reporte final explica lo que pasó.
+
+Esta parte conecta con el diff: yo no acepto el cambio por confianza, lo acepto porque lo entiendo y porque hay evidencia.
+
+SLIDE 17:
+Si alguien quiere empezar a usar esto, mi recomendación es no iniciar en el repo más crítico ni con una tarea enorme.
+
+Empieza con un repo no crítico, crea reglas básicas como AGENTS.md o CLAUDE.md, pide una auditoría sin modificar, luego un cambio pequeño y finalmente revisa diff y evidencia.
+
+La habilidad no está solo en escribir prompts; está en aprender a trabajar con IA sin perder control técnico.
+
+SLIDE 18:
+El cierre es que la IA no trae el volante.
+
+Trae velocidad, memoria y manos extra, pero la dirección sigue siendo nuestra.
+
+La fórmula final es contexto, permisos, pruebas y criterio técnico.
+
+No delegues criterio. Delega trabajo verificable.
+
+Para cerrar puedo preguntar: ¿qué parte de su flujo diario mejorarían primero con IA?
+
+PREGUNTAS SECRETAS DEL ROBOT:
+Si hago click al robot, salen preguntas rápidas para conversación.
+
+La idea es usarlas si alguien pregunta algo común o si quiero cerrar con interacción:
+- La IA reemplaza tareas repetitivas antes que programadores completos.
+- Claude y Codex no compiten igual: Claude suele analizar mejor y Codex suele ejecutar mejor sobre el repo.
+- Dar acceso total se puede, pero no siempre es buena idea.
+- El contexto pesa más que el prompt aislado.
+- El error más común es aceptar cambios sin revisar.
+- El cambio fuerte de estos años es pasar de pedir respuestas a delegar tareas completas.
+- Regla principal: nunca aprobar algo que no entiendes.

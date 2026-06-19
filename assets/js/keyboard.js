@@ -17,6 +17,10 @@ class KeyboardController {
       return;
     }
 
+    if (document.body?.classList?.contains('secret-qa-open')) {
+      return;
+    }
+
     switch (event.key) {
       case 'ArrowRight':
       case ' ':
